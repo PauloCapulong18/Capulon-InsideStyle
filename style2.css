@@ -613,77 +613,187 @@ font-weight: 700;
  font-weight: 700;
 }
 /* MINIMALIST BANNER SECTION */
-/* minimalistBanner */
-.minimalistBanner__left img{
+.package__wrapper {
   display: flex;
-  width: 50rem;
-  height: 50rem;
+  flex-direction: column;
+  align-items: center;
 }
-.minimalistBanner__left{
-  width: 60rem;
-  height: 50rem;
-  margin-bottom: 5rem;
-  justify-content: start;
+.package__theme {
+  padding: 5rem;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 1500px;
+  
+  width: 100%;
 }
-.minimalistBanner__right h1{
+.package__wrapper h1{
   color: var(--clr-primary);
-  font-size: 4rem;
-  justify-content: end;
-  max-width: 100rem;
-  padding: 3rem 0;
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 700;
+  text-align: center;
 }
-.minimalistBanner__wrapper{
+.package__theme{
+  padding: 3rem 25rem;
   display: flex;
-  justify-content: space-between;
-  gap: 5rem;
-  justify-content: start;
-}
-.minimalistBanner__
-/* MINIMALIST BANNER 2 */
-.minimalistBanner2__left img{
-  display: flex;
-  width: 50rem;
-  height: 50rem;
-}
-.minimalistBanner2__left{
-  width: 60rem;
-  height: 50rem;
-  margin-bottom: 5rem;
-  justify-content: start;
-}
-.minimalistBanner2__right h1{
+  flex-direction: row;
+
+  .package__left{
+    width: 500rem;
+  }
+
+  .package__right h2{
   color: var(--clr-primary);
-  font-size: 4rem;
-  justify-content: end;
-  max-width: 100rem;
-  padding: 3rem 0;
-  font-size: 3rem;
+  font-size: 6rem;
   font-weight: 700;
+  text-align: center;
+  }
+
+  .package__right p{
+    margin-top: 3rem;
+    text-align: justify;
+  }
 }
-.minimalistBanner2__wrapper{
-  display: flex;
-  justify-content: space-between;
-  gap: 5rem;
-  justify-content: start;
+
+.package__theme:nth-child(odd){
+  background-color: var(--clr-semilight);
+  flex-direction: row-reverse;
+  .package__right p{
+    padding-right: 10rem;
+
+  }
+
+  .package__left img{
+    padding-left: 100px 0;
+  }
 }
- 
+
+@media(max-width: 460px){
+  .package__wrapper{
+    flex-direction: column-reverse;
+    padding: 0 15px;
+  }
+  .package__right h2{
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+}
  /* UPDATES */
- .updatesBanner{
- padding: 8rem;
- }
-.updatesBanner__{
+.updates{
+  padding: 50px 0;
+}
+.updates_wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
 }
-.updatesBanner__right h1{
+.updates_content{
+  padding: 40px 0;
+  max-width: 500px;
+  width: 100%;
+}
+.updates_content h1{
   text-align: center;
-  font-size: ;
+  font-size: 6rem;
+  color: var(--clr-primary);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.updates_content p{
+  text-align: justify;
+  padding-top:  30px;
+}
+/* Catalog */
+.catalog{
+  padding: 50px 0;
+}
+.catalog h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+margin-bottom: 20px;
+text-align: center;
+color: var(--clr-primary);
+}
+.catalog__wrapper{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 50px;
+}
+
+.catalog__cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.catalog__cards .card{
+  padding: 20px;
+  background-color: var(--clr-semilight);
+}
+.catalog__cards .card h4{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: var(--clr-primary);
 
 }
+.catalog__sidebar ul{
+    font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  list-style: none;
+}
+.catalog__sidebar ul li{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  justify-content: space-around;
+}
+/* Project cards and Recent */
+.Project{
+  padding: 50px;
+}
+.Project h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--clr-primary);
+}
+.Project__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.Project__wrapper ul{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.Project__wrapper img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 460px) {
+  .Project__wrapper{
+    flex-direction: column-reverse;
+    font-size: 0 15px;
+  }
+  
+}
+/* Contacts Section */
+
 
 
  /* REPEATABLE  */
